@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th>Artist</th>
+            <th>Title</th>
+            <th>Length</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- basiclly jinja2 has a lot of functionality like loops, conditions, str functions etc -->
+        {% for song in data_frontend %}
+            <tr> <!-- variables from python are accessed within double '{' -->
+                <td> {{ song.artist }}</td>
+                <td> {{ song.title }}</td>
+                <td> {{ song.length }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>
